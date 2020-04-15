@@ -1,0 +1,31 @@
+Exception in thread main java.util.InputMismatchException 
+	at java.basejava.util.Scanner.throwFor(Scanner.java939) 
+	at java.basejava.util.Scanner.next(Scanner.java1594) 
+	at java.basejava.util.Scanner.nextInt(Scanner.java2258) 
+	at java.basejava.util.Scanner.nextInt(Scanner.java2212)
+
+>> scanner type 오류.
+sc.nextInt(); 가 입력인데 2번 사용했음.
+
+
+
+
+Exception in thread "main" java.lang.StringIndexOutOfBoundsException: offset 1,length 0
+	at java.base/java.lang.String.checkOffset(String.java:3380)
+	at java.base/java.lang.AbstractStringBuilder.insert(AbstractStringBuilder.java:1117)
+	at java.base/java.lang.StringBuffer.insert(StringBuffer.java:556)
+
+
+>> 타입 오류
+	StringBuffer text = new StringBuffer("");
+	String temp = new String("");
+이거인데 
+	temp = sc.nextLine();				
+	text.insert(i_start+1,temp); 이렇게 사용.
+
+이게 아니라 sc.nextInt(); 사용 후 /n 초기화를 위해 sc.nextLine()입력해준 후에
+다시 sc 사용.
+
+*** 입력 scanner는 하나만 사용해도 됨.
+
+
