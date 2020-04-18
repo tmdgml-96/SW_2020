@@ -1,4 +1,4 @@
-package command_home;
+package Command_Assignment;
 
 import java.util.Scanner;
 
